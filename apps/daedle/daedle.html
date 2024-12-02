@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Dædle</title>
+    <link rel='webdaemon' href='daedle.yml' prefix='daedle'>
+    <link rel='stylesheet' href='daedle.css'>
+    <link rel='icon' href='daedle.png'>
+    <script type='importmap'>
+      {
+        "imports": {
+          "$static/": "https://webdaemon.online/dev/static/"
+        }
+      }
+    </script>
+    <script src='daedle.js' type='module'></script>
+  </head>
+
+  <body>
+    <h1>Dædle</h1>
+
+    <!--
+      States are:
+      - loading
+      - oneplayer
+      - invite
+      - twoplayer
+    -->
+    <state class='loading'>
+
+      <loading>
+        Loading, please wait
+      </loading>
+
+      <!-- Match panel -->
+      <match>
+
+        <flip-container>
+
+          <flipper>
+            <front>
+              <mode></mode>
+
+              <game> </game>
+
+              <solved></solved>
+
+              <lost></lost>
+
+              <keyboard>
+                <row class='row1'>
+                  <key name='Q'>Q</key>
+                  <key name='W'>W</key>
+                  <key name='E'>E</key>
+                  <key name='R'>R</key>
+                  <key name='T'>T</key>
+                  <key name='Y'>Y</key>
+                  <key name='U'>U</key>
+                  <key name='I'>I</key>
+                  <key name='O'>O</key>
+                  <key name='P'>P</key>
+                </row>
+                <row class='row2'>
+                  <key name='A'>A</key>
+                  <key name='S'>S</key>
+                  <key name='D'>D</key>
+                  <key name='F'>F</key>
+                  <key name='G'>G</key>
+                  <key name='H'>H</key>
+                  <key name='J'>J</key>
+                  <key name='K'>K</key>
+                  <key name='L'>L</key>
+                </row>
+                <row class='row3'>
+                  <key name='enter' class='material-icons'>
+                    keyboard_return
+                  </key>
+                  <key name='Z'>Z</key>
+                  <key name='X'>X</key>
+                  <key name='C'>C</key>
+                  <key name='V'>V</key>
+                  <key name='B'>B</key>
+                  <key name='N'>N</key>
+                  <key name='M'>M</key>
+                  <key name='del' class='material-icons'>
+                    backspace
+                  </key>
+                </row>
+              </keyboard>
+            </front>
+
+            <back>
+              <share>
+                <field>
+                  <label>Player 2</label>
+                  <input name='player2' type='text' placeholder='e.g. my.friend.id'>
+                </field>
+
+                <buttons>
+                  <button name='join'>Join</button>
+                  <button name='reset'>Reset Game</button>
+                </buttons>
+              </share>
+
+              <invite>
+                Player 2 is invited to join your game
+                <buttons>
+                  <button name='cancel'>Cancel Invite</button>
+                  <button name='reset'>Reset Game</button>
+                </buttons>
+              </invite>
+
+              <player2>
+                <name></name>
+
+                <game> </game>
+
+                <solved></solved>
+
+                <lost></lost>
+
+                <buttons>
+                  <button name='kick'>Kick Player 2</button>
+                  <button name='reset'>Reset Game</button>
+                </buttons>
+              </player2>
+            </back>
+          </flipper>
+        </flip-container>
+      </match>
+    </state>
+  </body>
+
+</html>

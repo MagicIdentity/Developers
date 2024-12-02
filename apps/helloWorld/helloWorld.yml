@@ -1,0 +1,60 @@
+# The YAML file defines the back-end part of a Dæmon app.
+# In this example, the endpoint ends up being:
+#   https://some.daemon/tab/hello/world/v1/XXX
+# where the XXX portion of the path is handled by the server code in `helloWorld.ts`.
+
+# These are used when displaying the app in a shell or launcher.
+title: Hello World
+
+# No need for icon if the HTML defines it in a link rel='icon' element.
+# icon: helloWorld.png
+
+# This is the URL path prefix reserved for use by this app (see `tab` below).
+prefix: hello/world
+
+# The scope is a set of capabilities specific to this app.
+# We define just one capability.
+scope:
+   speak:
+      description: Can say hello world!
+
+# Specific authorizations are granted to the set of counterparties below.
+# We only define one, and it's ourselves (note the use of a built-in variable).
+# Note that we can only define grants on this app. Each app must make its own grants.
+grant:
+   ${party}:
+      - speak
+
+# When a shell launches this app, it is given a set of signed tokens to use in requests to
+# other hosts (i.e. _audiences_).
+# The signed token must be put in the `X-Tabserver-Token` header when making requests to
+# any one of the parties listed. In this case, we make requests on our own Dæmon.
+# The "special" app `party:control` is automatically installed when a Dæmon is created,
+# and it defines a set of admin-like capabilities, including using Dæmon storage.
+#
+# The special token 'placement' can be used:
+# - under `audience`, indicates the default placement of tokens for all hosts.
+# - under `somehost`, indicates the placement of the token for that host.
+audience:
+   ${party}:
+      ${source}: speak
+      party:control: setitem getitem
+
+# The app can have a set of endpoints, each implemented by a server normally written in
+# Typescript (although you can use Javascript).
+# Often only a single server is used, and it can be convenient to use a version number
+# instead of a name so as to get simple API versioning.
+# The source is loaded on demand, and the process is killed after (in this case) 30 seconds
+# of inactivity.
+# You can provide static configuration if required. Note that secrets must not be passed this
+# way for obvious reasons! Instead, implement a '/settings' route for dynamic configuration.
+tab:
+   v1:
+      src: helloWorld.ts            # Mandatory. Relative to this YAML file.
+      importmap: importmap.json     # Optional.  Ditto.
+      ttl: 30                       # Optional.
+      config:                       # Optional.
+         greeting: Hi there!
+         yaml: ${yaml}                # Built-in variable.
+         source.host: ${source.host}  # Ditto.
+         yaml.host: ${yaml.host}      # Ditto

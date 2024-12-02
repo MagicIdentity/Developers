@@ -1,0 +1,263 @@
+@import url(./magic.css);
+@import url(states.css);
+@import url(flip.css);
+
+:root {
+  --white: #fff;
+  --green: #6aaa64;
+  --amber: #c9b458;
+  --grey: #787c7e;
+  --keyFgColor: #000;
+  --keyBgColor: #ddd;
+  --frontBgColor: #fff;
+  --backBgColor: var(--grey);
+}
+
+body {
+  padding: 0;
+}
+
+state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--white);
+  margin: 10px 0;
+}
+
+loading {
+  font-size: x-large;
+  color: var(--white);
+}
+
+loading,
+match,
+front,
+back,
+player2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+front {
+  background-color: var(--frontBgColor);
+}
+
+back {
+  justify-content: space-around;
+  background-color: var(--backBgColor);
+}
+
+mode {
+  color: var(--keyFgColor);
+}
+
+player2 name {
+  color: var(--firstColor);
+}
+
+share,
+invite,
+join {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+field {
+  display: flex;
+  flex-direction: column;
+}
+
+field input {
+  width: 15em;
+  height: 2em;
+  border: 1px solid var(--firstBorderColor);
+  border-radius: 4px;
+  font-size: large;
+  padding: 5px;
+}
+
+guesses {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+guesses guess {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+letter {
+  width: 1.5em;
+  font-size: xx-large;
+  font-weight: bold;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: white;
+  background-color: var(--guessBgColor);
+  border: transparent solid 2px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+player2 letter {
+  color: transparent;
+}
+
+letter.guessed {
+  color: black;
+  border-color: black;
+}
+
+front letter:empty {
+  border-color: #eee;
+}
+
+back letter {
+  border-color: #888;
+}
+
+letter.green {
+  background-color: var(--green);
+}
+
+letter.amber {
+  background-color: var(--amber);
+}
+
+letter.grey {
+  background-color: var(--grey);
+}
+
+back letter.grey {
+  background-color: #666;
+}
+
+keyboard {
+  display: flex;
+  flex-direction: column;
+}
+
+solved,
+lost {
+  display: none;
+}
+
+solved {
+  font-size: large;
+  font-weight: bold;
+  color: var(--green);
+}
+
+lost {
+  text-transform: uppercase;
+  font-size: large;
+  font-weight: bold;
+  color: var(--grey);
+}
+
+.solved solved,
+.lost lost {
+  display: revert;
+}
+
+solved::before {
+  content: 'Solved in ';
+}
+
+solved::after {
+  content: ' goes!'
+}
+
+lost::before {
+  content: 'It was ';
+}
+
+lost::after {
+  content: '!!';
+}
+
+.solved keyboard,
+.lost keyboard {
+  display: none;
+}
+
+keyboard row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+keyboard row.row2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+key {
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  margin: 3px;
+  padding: 3px;
+  color: var(--keyFgColor);
+  background-color: var(--keyBgColor);
+  border-radius: 3px;
+  font-size: x-large;
+  user-select: none;
+}
+
+key[name=del],
+key[name=enter] {
+  min-width:40px;
+}
+
+key.material-icons {
+  display: inherit;
+}
+
+key.green {
+  background-color: var(--green);
+}
+
+key.amber {
+  background-color: var(--amber);
+}
+
+key.grey,
+key.touched {
+  background-color: var(--grey);
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out 1;
+}

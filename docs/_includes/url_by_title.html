@@ -1,0 +1,6 @@
+{% assign target_page = site.pages | where: "title", include.title | first %}
+{% if target_page %}
+  {{ target_page.url | relative_url }}
+{% else %}
+  {{ include.default | default: "Cannot find title" }}
+{% endif %}

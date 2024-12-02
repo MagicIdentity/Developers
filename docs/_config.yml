@@ -1,0 +1,9 @@
+theme: minima
+
+header_pages:
+  - start/index.md
+  - tutorials/index.md
+  - reference/index.md
+
+github_repo: "https://github.com/Magic-ID/Developers"
+github_base: "https://github.com/Magic-ID/Developers/tree/main"

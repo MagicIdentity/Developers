@@ -1,0 +1,30 @@
+{% if page.parent or page.next or page.back %}
+  <crumbs class='wrapper'>
+    <back>
+      {% if page.back %}
+        <a href='{% include url_by_title.html title=page.back %}'>
+          <i class='material-icons'>chevron_left</i>
+          <span>{{ page.back }}</span>
+        </a>
+      {% endif %}
+    </back>
+
+    <parent>
+      {% if page.parent %}
+        <a href='{% include url_by_title.html title=page.parent %}'>
+          <i class='material-icons'>arrow_upward</i>
+          <span>{{ page.parent }}</span>
+        </a>
+      {% endif %}
+    </parent>
+
+    <next>
+      {% if page.next %}
+        <a href='{% include url_by_title.html title=page.next %}'>
+          <span>{{ page.next }}</span>
+          <i class='material-icons'>chevron_right</i>
+        </a>
+      {% endif %}
+    </next>
+  </crumbs>
+{% endif %}

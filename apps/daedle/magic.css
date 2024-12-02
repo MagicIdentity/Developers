@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins);
+@import url(https://fonts.googleapis.com/css2?family=Material+Icons);
+
+:root {
+  /* Text Color 01 */
+  --firstColor: #ffffff;
+
+  /* Text Color 02 */
+  --secondColor: #bec6d8c0;
+
+  /* Test Color 03 */
+  --thirdColor: #7590d5;
+
+  /* Webpage Background (from) */
+  --firstBgColor: #6e89cb;
+
+  /* Webpage Background (to) */
+  --secondBgColor: #7786ab;
+
+  /* Section Background, Footer */
+  --thirdBgColor: #2c324380;
+
+  /* Button text */
+  --firstBorderColor: #435789c0;
+
+  --buttonTextColor: #435789;
+  --buttonBgColor: #ffffff;
+  --busyBackgroundColor: #bec6d8;
+  --busyBorderColor: #bec6d8;
+  --shadow1: 0px 4px 8px var(--thirdBgColor);
+
+  --busyColor: #aaa;
+}
+
+body {
+  background: linear-gradient(to right, var(--firstBgColor), var(--secondBgColor));
+  max-width: 600px;
+  min-width: 200px;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  color: var(--firstColor);
+  background-color: var(--backgroundColor);
+}
+
+h1,
+label {
+  color: var(--firstColor);
+}
+
+h1 {
+  text-align: center;
+}
+
+div[name=message] {
+  color: var(--firstColor);
+  overflow-wrap: break-word;
+  word-break: break-all;
+  overflow: auto;
+}
+
+div.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.col {
+  display: flex;
+  flex-direction: column;
+}
+
+div.col.center {
+  align-items: center;
+}
+
+div.col.left {
+  align-items: left;
+}
+
+div.col > * {
+  flex: 1;
+}
+
+div[name=logo] {
+  background-image: url(magic.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  height:50px;
+  width: 200px;
+}
+
+div[name=state].orphan {
+  display: none;
+}
+
+button {
+  font-size: inherit;
+  color: var(--buttonTextColor);
+  background-color: var(--buttonBgColor);
+  border-color: var(--firstBorderColor);
+  box-shadow: var(--shadow1);
+  border-style: solid;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 6em;
+  max-width: 8em;
+  cursor: pointer;
+}
+
+input, textarea {
+  color: var(--buttonTextColor);
+}

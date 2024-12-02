@@ -1,0 +1,14 @@
+div.message,
+div.response,
+div.lastseen {
+  margin: 20px;
+  font-size: large;
+}
+
+div[name=orphan] {
+  display: none;
+}
+
+div.state.orphan div[name=orphan] {
+  display: revert;
+}

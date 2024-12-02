@@ -1,0 +1,23 @@
+prefix: ${prefix}
+
+scope:
+  getGame:
+    description: Can get the game object
+  setGame:
+    description: Can set the game object
+
+grant:
+  ${party}:
+    - getGame
+    - setGame
+  '%':
+    - getGame
+
+audience:
+  ${party}:
+    ${source}: getGame setGame
+
+tab:
+  v1:
+    src: ./be/daedle.ts
+    importmap: ./importmap.json

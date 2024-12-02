@@ -1,0 +1,22 @@
+state.loading > *:not(loading),
+state.match > *:not(match) {
+  display: none;
+}
+
+match.oneplayer back > *:not(share),
+match.invite back > *:not(invite),
+match.twoplayer back > *:not(player2) {
+  display: none;
+}
+
+match.oneplayer front mode::before {
+  content: 'Single Player';
+}
+
+match.invite front mode::before {
+  content: 'Waiting for Player 2';
+}
+
+match.twoplayer front mode::before {
+  content: 'Two Player';
+}
