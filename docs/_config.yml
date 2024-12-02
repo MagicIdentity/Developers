@@ -5,5 +5,5 @@ header_pages:
   - tutorials/index.md
   - reference/index.md
 
-github_repo: "https://github.com/Magic-ID/Developers"
-github_base: "https://github.com/Magic-ID/Developers/tree/main"
+github_repo: "https://github.com/MagicIdentity/Developers"
+github_base: "https://github.com/MagicIdentity/Developers/tree/main"
