@@ -45,4 +45,4 @@ You'll find demo apps (and the source of this website) in the [Web Agent Develop
 
 Congratulations! You've published your own app using your own web agent.
 
-Now take a look at [how it works]({{"/tutorials/helloWorld" | relative_url }})!
+Now take a look at [how it works](explainer)!
