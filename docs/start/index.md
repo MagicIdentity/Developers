@@ -12,4 +12,4 @@ a quick read of these pages:
 
 
 {:.small}
-<sup>*</sup>The internal name is actually _Web Daemon_, and you'll see this here and there. But the marketing folks prefer _Web Agent_ cos they're not aware of the ancient convention of long-running background processes being called daemons. Whatever.
+<sup>*</sup>_also known as Web Daemons, and occasionally Tabservers._
