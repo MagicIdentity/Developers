@@ -16,11 +16,13 @@ We recommend the use of import maps to ensure consistent versioning across your 
 
 - [Using Import Maps](importmaps) in browser and backend code.
 
-If you do not use an import map, reference the library directly. For example:
-
-- `https://webdaemon.online/dev/static/lib/js/BrowserApp.js`
-
 ## Libraries
+Library documentation is auto-generated from the source code. Please contact
+[support@magic-id.com](mailto:support@magic-id.com) if you find errors, inconsistencies
+or would like clearer documentation in any area.
 
-- [BrowserApp.js](browserapp) provides basic Javascript app support functions.
-- [Storage.js](storage) provides Javascript functions to for web agent key/value storage.
+Note that browser-side code can only use Javascript libraries. Daemon-side code can use
+both Javascript and Typescript libraries.
+
+- [Web Agent Javascript](https://webdaemon.online/dev/static/lib/docs/js/index.html)
+- [Web Agent Typescript](https://webdaemon.online/dev/static/lib/docs/ts/index.html)
