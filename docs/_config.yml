@@ -7,3 +7,4 @@ header_pages:
 
 github_repo: "https://github.com/MagicIdentity/Developers"
 github_base: "https://github.com/MagicIdentity/Developers/tree/main"
+jsdocs_base: "https://webdaemon.online/dev/static/lib/docs/index.js"
