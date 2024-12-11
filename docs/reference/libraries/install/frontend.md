@@ -25,7 +25,7 @@ If you don't use nodeJs with npm, then you can use the `jsdelivr.net` service.
 For example, to use the `BrowserApp` class:
 
 ```typescript
-import { BrowserApp } from 'https://cdn.jsdelivr.net/npm/webdaemon/index.js'
+import { BrowserApp } from 'https://cdn.jsdelivr.net/npm/webdaemon'
 ```
 
 In this case we recommend using an [Import Map](importmaps).
