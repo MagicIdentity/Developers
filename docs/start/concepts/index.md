@@ -11,8 +11,8 @@ They help with the integration problems that arise when making systems work toge
 
 The pages below explain different aspects:
 
-- [Uses of Web Agents](./uses)
-- [Basic Capabilities](./basics)
-- [Web Agent Shell](./shell)
-- [Web Agent Apps](./apps)
-- [Web Agent Drive](./drive)
+- [What is a Web Agent?](whatis)
+- [Uses of Web Agents](uses)
+- [Basic Capabilities](basics)
+- [Web Agent Shell](shell)
+- [Web Agent Drive](drive)

@@ -2,6 +2,7 @@
 layout: page
 title: Uses of Web Agents
 parent: Concepts
+back: What is a Web Agent?
 next: Basic Capabilities
 ---
 ```mermaid
