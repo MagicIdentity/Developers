@@ -5,21 +5,20 @@ back: Uses of Web Agents
 parent: Concepts
 next: Web Agent Shell
 ---
-Web Agents are designed to help with the integration
-problems that arise when making systems work together.
+Web agents give you new ways to design apps and deploy services. But you don't need
+to learn new tech.
 
-Web Agents are:
-
+- **Familiar**
+  - Use standard web tools such as HTML, CSS, JS and React.
+  - Use standard web patterns such as REST and NodeJs servers.
 - **Lightweight**
-  - Frontend is standard web pages.
-  - Backend provisioning is automatic.
-  - Backend logic is written in Typescript (or Javascript)
+  - Agent provisioning and app deployment are instant and automatic.
+  - Agent logic is written in Typescript (or Javascript)
 - **Web Addressable**
   - Each web agent has a unique DNS hostname.
   - Each web agent is permanently available.
 - **Dynamic**
-  - Web Agents can be created and destroyed instantly.
-  - App-specific API endpoints are installed and removed instantly.
-  - Processes serving endpoints are started and stopped on demand.
+  - Web agents can be created and destroyed instantly.
+  - Web agent endpoints are installed and removed instantly.
 
 Web Agents are instantly provisioned by Web Agent Providers, such as [Magic ID](https://magic-id.com).

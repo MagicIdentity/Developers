@@ -3,7 +3,6 @@ layout: page
 title: Activate
 back: Concepts
 parent: Starting out
-next: Shell
 ---
 # Agent Activation
 Web agents are hosted by web agent providers such as [Magic ID](https://magic-id.com).
