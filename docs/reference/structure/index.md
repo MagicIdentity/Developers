@@ -3,16 +3,33 @@ layout: page
 title: App Structure
 parent: Reference
 ---
-```mermaid
-architecture-beta
-    group api(cloud)[API]
+A web agent app comprises:
 
-    service db(database)[Database] in api
-    service disk1(disk)[Storage] in api
-    service disk2(disk)[Storage] in api
-    service server(server)[Server] in api
+1. Front end browser
+   - For example, using Vite or NextJS.
+2. Agent server
+   - For example, using native Typescript or NextJS.
 
-    db:L -- R:server
-    disk1:T -- B:server
-    disk2:T -- B:db
+A typical project directory might look like this:
+
+```
+.
++--myapp
+   |-- browser
+   |   |-- index.html
+   |   |-- myapp.yml (points to ../agent/myapp.ts)
+   |   |-- your
+   |   |-- familiar
+   |   +-- structure
+   |
+   |-- agent
+   |   |-- myapp.ts (a standard typescript server)
+   |   |-- your
+   |   |-- typescript
+   |   +-- modules
+   |
+   |-- your
+   |-- build
+   +-- tools
+
 ```

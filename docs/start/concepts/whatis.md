@@ -13,6 +13,13 @@ Normally we expect an app to have:
 1. A personal frontend running in your browser.
 2. A shared server running on a central system.
 
+```mermaid
+block-beta
+    columns 1
+    id1("Web Browser")
+    id3("Traditional Backend")
+```
+
 ## Tomorrow's Apps
 A web agent app adds a new dimension:
 
@@ -20,6 +27,17 @@ A web agent app adds a new dimension:
 2. **A personal server running in your web agent.**
 3. A shared server running on a central system.
 
-That personal server is unique to you _and_ the app - it's not shared.
+```mermaid
+block-beta
+    columns 1
+    block
+      id1("Web Browser")
+      id2("Web Agent")
+    end
+    id3("Traditional Backend")
+```
 
-That's the difference between a personal server and a shared server.
+The personal server running in your web agent is unique to you _and_ the app.
+
+It's different from a traditional backend because it's not shared.
+It's different from a browser because it is always up and running.
