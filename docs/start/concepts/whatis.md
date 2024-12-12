@@ -4,27 +4,29 @@ title: What is a Web Agent?
 parent: Concepts
 next: Uses of Web Agents
 ---
-A web agent is a personal, dynamic server that loads and unloads APIs as quickly as your
+A web agent is a personal system that uses HTML to load and unload server APIs as quickly as your
 browser loads and unloads pages.
 
 ## Traditional App
-In a traditional app, we navigate to a web page which uses an API:
-1. On a pre-deployed server
-2. Shared by all users of the app.
+In a traditional app, we navigate to a web page which uses:
+1. A pre-loaded app API
+2. On a particular server
+3. Shared by all users of the app.
 
 ```mermaid
 block-beta
     columns 1
     a("Web App")
     space
-    b("Server API")
+    b("App API")
     a-->b
 ```
 
 ## Web Agent App
-In a web agent app, we navigate to a web page which uses an API:
-1. On an dynamically loaded server
-2. Personal to each user of the app.
+In a web agent app, we navigate to a web page which uses:
+1. A dynamically loaded app API
+2. On a different server
+2. Unique to each user of the app.
 
 ```mermaid
 block-beta
@@ -46,8 +48,8 @@ block-beta
 ```
 ## Differences
 
-1. The web agent is personal to you (or a thing, or a business purpose).
-2. The web agent (un)loads the app API as your browser (un)loads the app page.
+1. Like a browser, your web agent uses HTML to load and unload app APIs on demand.
+2. There is a different server for each app for each person.
 3. Identity, authentication and authorization come for free with the web agent security tokens.
 
 ## Standards
