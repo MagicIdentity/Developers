@@ -2,6 +2,7 @@
 layout: page
 title: Libraries
 parent: Reference
+back: App Structure
 ---
 Use libraries in your web agents to make development easier:
 

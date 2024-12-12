@@ -2,6 +2,7 @@
 layout: page
 title: App Structure
 parent: Reference
+next: Libraries
 ---
 A web agent app comprises:
 
