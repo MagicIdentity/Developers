@@ -4,8 +4,10 @@ title: What is a Web Agent?
 parent: Concepts
 next: Uses of Web Agents
 ---
-A web agent is a personal system that uses HTML to load and unload server APIs as quickly as your
-browser loads and unloads pages.
+Previously we said a web agent is _a personal server that thinks it's a browser_.
+
+In practice, your web agent uses HTML to load and unload server APIs as
+quickly as your browser loads and unloads web pages.
 
 ## Traditional App
 In a traditional app, we navigate to a web page which uses:
@@ -23,8 +25,8 @@ block-beta
 ```
 
 ## Web Agent App
-In a web agent app, we navigate to a web page which uses:
-1. A dynamically loaded app API
+In a web agent app, we navigate to a web page which causes:
+1. The app API to be loaded dynamically
 2. On a different server
 2. Unique to each user of the app.
 
