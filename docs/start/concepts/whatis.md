@@ -23,7 +23,7 @@ block-beta
 
 ## Web Agent App
 In a web agent app, we navigate to a web page which uses an API:
-1. On a dynamically loaded server
+1. On an dynamically loaded server
 2. Personal to each user of the app.
 
 ```mermaid
@@ -46,6 +46,12 @@ block-beta
 ```
 ## Differences
 
-1. The web agent is personal to you.
+1. The web agent is personal to you (or a thing, or a business purpose).
 2. The web agent (un)loads the app API as your browser (un)loads the app page.
 3. Identity, authentication and authorization come for free with the web agent security tokens.
+
+## Standards
+
+1. Standard web HTML, CSS, JS and Typescript.
+2. Standard tooling such as React, Vite, Oak.
+3. Standard HTTP interop to/from other personal agents and systems.
