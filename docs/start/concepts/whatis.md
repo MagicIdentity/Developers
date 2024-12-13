@@ -13,9 +13,9 @@ Instead your agent code is dynamically deployed in a _different_ server with a _
 host name, unique to each user.
 
 ## Centralised App
-Let's suppose you've written a backend API called `myapi`.
+Let's suppose you've written a backend API with the route `/myapi`.
 
-In a traditional app, the user navigates to a web page. This expects to talk to `myapi` on a server
+In a traditional app, the user navigates to a web page. This expects to talk to `/myapi` on a server
 whose pre-configured name is usually the same for all users:
 
 ```mermaid
@@ -35,8 +35,8 @@ block-beta
 ```
 
 ## Web Agent App
-In contrast, when a user launches your web agent app, `myapi` is instantly deployed on their agent. Your app talks
-to `myapi` on their agent, not a central server:
+In contrast, when a user launches your web agent app, `/myapi` is instantly deployed on their agent. Your app talks
+to `/myapi` on their agent, not a central server:
 
 ```mermaid
 block-beta

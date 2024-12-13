@@ -6,19 +6,23 @@ parent: Concepts
 next: Web Agent Shell
 ---
 Web agents give you new ways to design apps and deploy services. But you don't need
-to learn new tech.
+to learn new tech:
 
 - **Familiar**
-  - Use standard web tools such as HTML, CSS, JS and React.
-  - Use standard web patterns such as REST and NodeJs servers.
+  - Use standard web tools such as HTML, CSS, JS, React and npm.
+  - Use standard patterns such as REST using vanilla code or frameworks like Oak.
+  - Use standard `npm` libraries in agent code subject to sandbox security.
 - **Lightweight**
   - Agent provisioning and app deployment are instant and automatic.
-  - Agent logic is written in Typescript (or Javascript)
+  - Agent logic executes native Typescript or Javascript, optionally transpiled.
+  - Agent Drive and Agent Storage provide lightweight persistence patterns.
 - **Web Addressable**
-  - Each web agent has a unique DNS hostname.
-  - Each web agent is permanently available.
+  - Each web agent has a unique hostname which is its identity.
+  - Each web agent is up and running 24x7.
+  - Agents can form peer-to-peer decentralized networks.
 - **Dynamic**
   - Web agents can be created and destroyed instantly.
-  - Web agent endpoints are installed and removed instantly.
+  - Web agent API endpoints are installed and removed dynamically.
+  - Your web agent logic is spun up on demand to serve a given endpoint.
 
 Web Agents are instantly provisioned by Web Agent Providers, such as [Magic ID](https://magic-id.com).
