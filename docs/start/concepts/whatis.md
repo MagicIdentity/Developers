@@ -15,7 +15,7 @@ host name, unique to each user.
 ## Centralised App
 Let's suppose you've written a backend API called `myapi`.
 
-In a traditional app, the user navigates to a web page. This expects to talk to a backend server
+In a traditional app, the user navigates to a web page. This expects to talk to `myapi` on a server
 whose pre-configured name is usually the same for all users:
 
 ```mermaid
@@ -35,8 +35,8 @@ block-beta
 ```
 
 ## Web Agent App
-In a web agent app, when a user launches the app it talks to that user's personal agent
-whose name is different from any other user:
+In contrast, when a user launches your web agent app, `myapi` is instantly deployed on their agent. Your app talks
+to `myapi` on their agent, not a central server:
 
 ```mermaid
 block-beta
@@ -58,7 +58,8 @@ block-beta
 
 1. Web agents use HTML to load and unload page backends on demand like a browser.
 2. Each user has their own agent capable of running backends for many apps at once.
-3. Identity, authentication and authorization come for free with the web agent security tokens.
+3. Web agents are available 24/7 and can easily form decentralized peer-to-peer networks.
+4. Identity, authentication and authorization come for free with the web agent security tokens.
 
 ## Standards
 
