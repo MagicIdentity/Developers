@@ -4,7 +4,7 @@ title: What is a Web Agent?
 parent: Concepts
 next: Uses of Web Agents
 ---
-We [already said](../../start) a web agent is a personal server that thinks it's a browser.
+We [mentioned](../../start) a web agent is a personal server that thinks it's a browser.
 
 As a developer, the key point to note is that the agent backend code you write does
 not get deployed in one place - nor do you have to deploy it for your users.
