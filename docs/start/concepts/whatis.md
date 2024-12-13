@@ -6,17 +6,19 @@ next: Uses of Web Agents
 ---
 We [mentioned](../../start) a web agent is a personal server that thinks it's a browser.
 
-As a developer, the key point to note is that the agent backend code you write does
-not get deployed in one place - nor do you have to deploy it for your users.
+As a developer, the key point to note is that you don't deploy your Typescript/Javascript agent code
+yourself in order to bring up an API.
 
-Instead your agent code is dynamically deployed in a _different_ server with a _different_
-host name, unique to each user.
+Instead, the agent `.ts` files go right alongside the `.html` and `.css` of your web page, exactly like the `.js`
+files that execute in your user's browser.
+
+From there, your agent code is deployed to the user's web agent when they load your app.
 
 ## Centralised App
 Let's suppose you've written a backend API with the route `/myapi`.
 
 In a traditional app, the user navigates to a web page. This expects to talk to `/myapi` on a server
-whose pre-configured name is usually the same for all users:
+whose name is shared between all users:
 
 ```mermaid
 block-beta
