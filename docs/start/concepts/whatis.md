@@ -4,54 +4,60 @@ title: What is a Web Agent?
 parent: Concepts
 next: Uses of Web Agents
 ---
-Previously we said a web agent is _a personal server that thinks it's a browser_.
+We [already said](../../start) a web agent is a personal server that thinks it's a browser.
 
-In practice, your web agent uses HTML to load and unload server APIs as
-quickly as your browser loads and unloads web pages.
+As a developer, the key point to note is that the agent backend code you write does
+not get deployed in one place - nor do you have to deploy it for your users.
 
-## Traditional App
-In a traditional app, we navigate to a web page which uses:
-1. A pre-loaded app API
-2. On a particular server
-3. Shared by all users of the app.
+Instead your agent code is dynamically deployed in a _different_ server with a _different_
+host name, unique to each user.
+
+## Centralised App
+Let's suppose you've written a backend API called `myapi`.
+
+In a traditional app, the user navigates to a web page. This expects to talk to a backend server
+whose pre-configured name is usually the same for all users:
 
 ```mermaid
 block-beta
-    columns 1
-    a("Web App")
+    columns 4
+    u1("User 1")
+    u2("User 2")
+    u3("User 3")
+    u4("...")
+    space:4
     space
-    b("App API")
-    a-->b
+    be("some.server/myapi"):2
+    space
+    u1-->be
+    u2-->be
+    u3-->be
 ```
 
 ## Web Agent App
-In a web agent app, we navigate to a web page which causes:
-1. The app API to be loaded dynamically
-2. On a different server
-2. Unique to each user of the app.
+In a web agent app, when a user launches the app it talks to that user's personal agent
+whose name is different from any other user:
 
 ```mermaid
 block-beta
-    columns 1
-    block:wb
-        wb1("App 1")
-        wb2("App 2")
-        wb3("App 3")
-        wb4("...")
-    end
-    space
-    block:wa
-        wa1("API 1")
-        wa2("API 2")
-        wa3("API 3")
-        wa4("...")
-    end
-    wb --> wa
+    columns 4
+    u1("User 1")
+    u2("User 2")
+    u3("User 3")
+    u4("...")
+    space:4
+    b1("user.one/myapi")
+    b2("user.two/myapi")
+    b3("user.three/myapi")
+    b4("...")
+    u1-->b1
+    u2-->b2
+    u3-->b3
 ```
-## Differences
+## What's Different
 
-1. Like a browser, your web agent uses HTML to load and unload app APIs on demand.
-2. There is a different server for each app for each person.
+1. Web agents use HTML to load and unload page backends on demand like a browser.
+2. Each user has their own agent capable of running backends for many apps at once.
 3. Identity, authentication and authorization come for free with the web agent security tokens.
 
 ## Standards
