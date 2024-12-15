@@ -16,7 +16,7 @@ From there, your agent code is deployed to the user's web agent when they load y
 ## Centralised App
 Let's suppose you've written a backend API with the route `/myapi`.
 
-In a traditional app, the user navigates to a web page. This expects to talk to `/myapi` on a server
+In a traditional app, the user navigates to a web page. This is pre-configured to use `/myapi` on a server
 whose name is shared between all users<sup>*</sup>:
 
 ```mermaid
