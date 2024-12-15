@@ -4,13 +4,12 @@ title: What is a Web Agent?
 parent: Concepts
 next: Uses of Web Agents
 ---
-We [mentioned](../../start) a web agent is a personal server that thinks it's a browser.
+Web agent is the personal server that thinks it's a browser.
 
-As a developer, the key point to note is that you don't deploy your Typescript/Javascript agent code
-yourself in order to bring up an API.
+For developers, the main thing is _don't deploy your backend_.
 
-Instead, the agent `.ts` files go right alongside the `.html` and `.css` of your web page, exactly like the `.js`
-files that execute in your user's browser.
+Instead, the agent backend `.ts` files go right alongside the `.html` and `.css` of your web page,
+just like the `.js` files that execute in your user's browser.
 
 From there, your agent code is deployed to the user's web agent when they load your app.
 
@@ -18,7 +17,7 @@ From there, your agent code is deployed to the user's web agent when they load y
 Let's suppose you've written a backend API with the route `/myapi`.
 
 In a traditional app, the user navigates to a web page. This expects to talk to `/myapi` on a server
-whose name is shared between all users:
+whose name is shared between all users<sup>*</sup>:
 
 ```mermaid
 block-beta
@@ -61,10 +60,13 @@ block-beta
 1. Web agents use HTML to load and unload page backends on demand like a browser.
 2. Each user has their own agent capable of running backends for many apps at once.
 3. Web agents are available 24/7 and can easily form decentralized peer-to-peer networks.
-4. Identity, authentication and authorization come for free with the web agent security tokens.
+4. No login needed because identity, authentication and authorization come for free with agent security tokens.
 
 ## Standards
 
 1. Standard web HTML, CSS, JS and Typescript.
 2. Standard tooling such as React, Vite, Oak.
 3. Standard HTTP interop to/from other personal agents and systems.
+
+{:.small}
+<sup>*</sup>That's why users have to "log in" to distinguish themselves.
