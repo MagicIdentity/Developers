@@ -1,7 +1,7 @@
 ---
 layout: page
-title: App Structure
-parent: Reference
+title: Directory Structure
+parent: App Structure
 next: YAML Anatomy
 ---
 A web agent app comprises:
