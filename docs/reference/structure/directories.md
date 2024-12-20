@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Directory Structure
+title: App Structure
 parent: Reference
 next: YAML Anatomy
 ---
