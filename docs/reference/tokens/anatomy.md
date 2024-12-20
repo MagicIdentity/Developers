@@ -20,6 +20,7 @@ Each token is base64-encoded JSON containing the following fields:
   - The sender host is known as the **counterparty**, in this case `sender.agent.id`.
 - `iss` URL of the sending agent's public key.
   - Used to validate the token by the receiver.
+  - Origin **must** equal `sub`.
 - `src` URL of the app that is responsible for generating this token.
   - Agent apps are all identified by the HTML page that defines them.
 - `scope` requested capabilities, keyed by receiving app URL, on the receiving agent.
