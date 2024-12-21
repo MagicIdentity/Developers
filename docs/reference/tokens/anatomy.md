@@ -2,7 +2,7 @@
 layout: page
 title: Token Anatomy
 parent: Security Tokens
-next: Token Scopes
+next: Token Validation
 ---
 ```
 import { Token } from 'webdaemon'

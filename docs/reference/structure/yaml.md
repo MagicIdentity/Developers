@@ -3,11 +3,14 @@ layout: page
 title: YAML Anatomy
 parent: App Structure
 back: Directory Structure
+next: YAML Scopes
 ---
-Here is the YAML file that we use in the `helloWorld.html` example:
-```
+An app becomes a web agent app if you link a YAML file to the HTML thus:
+```html
 <link rel='webdaemon' href='helloWorld.yml'>
 ```
+
+This will have no effect _unless_ the app is loaded from a web agent shell.
 
 ```yaml
 # The YAML file defines the back-end part of a dæmon app.

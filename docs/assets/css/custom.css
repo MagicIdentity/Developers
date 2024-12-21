@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Material+Icons);
 
+h1 code {
+  border: 1px solid #888;
+}
+
 code.language-mermaid {
   display: flex;
   justify-content: center;
