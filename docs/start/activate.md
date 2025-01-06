@@ -3,11 +3,12 @@ layout: page
 title: Activate
 back: Concepts
 parent: Starting out
+next: Local Agent
 ---
 # Agent Activation
 Web agents are hosted by web agent providers such as [Magic ID](https://magic-id.com).
 
-In December this year, Magic will offer a self-serve activation flow which works like this:
+Soon Magic will offer a self-serve activation flow which works like this:
 
 1. Go to the activation site.
 2. Enter your mobile number.

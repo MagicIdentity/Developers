@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Build Distribution
-parent: Build Demo
+parent: Local Development
 back: Hooking Up
 ---
 Now let's build the app so it can be published on your drive.

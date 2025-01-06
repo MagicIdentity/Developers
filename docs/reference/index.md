@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Reference
+back: Tutorials
+parent: Welcome
 ---
 Use these sections as reference for your Web Agent development tasks.
 

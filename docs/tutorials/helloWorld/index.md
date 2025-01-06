@@ -2,7 +2,7 @@
 layout: page
 title: Hello World
 parent: Tutorials
-next: Build an App
+next: Local Development
 ---
 In this tutorial, we show the canonical _Hello World_ example:
 

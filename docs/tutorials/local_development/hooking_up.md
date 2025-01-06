@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hooking Up
-parent: Build Demo
+parent: Local Development
 back: Dev Servers
 next: Build Distribution
 ---
