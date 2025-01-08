@@ -21,7 +21,7 @@ docker run \
   --name devdaemon \
   --publish 56032:56032 \
   --mount type=bind,source=$PWD/agent,target=/mnt/agent \
-  jacobythwaites/devdaemon:dev
+  magicid/devdaemon
 ```
 
 If you look carefully, you'll see that we have mounted the disk directory that
