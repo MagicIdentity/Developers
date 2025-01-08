@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Running the App
-back: Hooking Up
+back: Link Agent to Page
 next: Hot Module Replacement
 parent: Local Development
 ---

@@ -2,7 +2,6 @@
 layout: page
 title: Local Development
 parent: Tutorials
-back: Hello World
 ---
 Follow the instructions in this session to set up your development environment
 and build a simple web agent app.
