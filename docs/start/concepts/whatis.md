@@ -4,14 +4,18 @@ title: What is a Web Agent?
 parent: Concepts
 next: Uses of Web Agents
 ---
-Web agent is the personal server that thinks it's a browser.
+A web agent is a personal server paired with an individual web page.
 
-For developers, the main thing is _don't deploy your backend_.
+As a developer, this adds a new dimension to your apps. Now you get an automatically
+deployed backend for free.
 
-Instead, the agent backend `.ts` files go right alongside the `.html` and `.css` of your web page,
+More than that, the backend is unique to the user whose browser
+loaded the app.
+
+You place your web agent `.ts` files right alongside the `.html` and `.css` of your web page,
 just like the `.js` files that execute in your user's browser.
 
-From there, your agent code is deployed to the user's web agent when they load your app.
+Your agent code is automatically deployed to your user's web agent server (_web daemon_) when they load your app.
 
 ## Centralised App
 Let's suppose you've written a backend API with the route `/myapi`.
@@ -36,8 +40,8 @@ block-beta
 ```
 
 ## Web Agent App
-In contrast, when a user launches your web agent app, `/myapi` is instantly deployed on their agent. Your app talks
-to `/myapi` on their agent, not a central server:
+In contrast, when a user launches your web agent app, `/myapi` is instantly deployed on their personal web agent server.
+Your app talks to `/myapi` on this personal server, not to a central server:
 
 ```mermaid
 block-beta
@@ -57,10 +61,10 @@ block-beta
 ```
 ## What's Different
 
-1. Web agents use HTML to load and unload page backends on demand like a browser.
-2. Each user has their own agent capable of running backends for many apps at once.
+1. Web agents are loaded and unloaded on demand like web pages in a browser.
+2. Each user has their own web agent server (_web daemon_) capable of running agents for many apps at once.
 3. Web agents are available 24/7 and can easily form decentralized peer-to-peer networks.
-4. No login needed because identity, authentication and authorization come for free with agent security tokens.
+4. No login is needed because identity, authentication and authorization come for free with agent security tokens.
 
 ## Standards
 
@@ -69,4 +73,4 @@ block-beta
 3. Standard HTTP interop to/from other personal agents and systems.
 
 {:.small}
-<sup>*</sup>That's why users have to "log in" to distinguish themselves.
+<sup>*</sup>That's why users have to _log in_ - to distinguish themselves.

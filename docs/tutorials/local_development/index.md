@@ -4,11 +4,13 @@ title: Local Development
 parent: Tutorials
 back: Hello World
 ---
-Follow the instructions in this session to build a simple agent web app from scratch,
-complete with agent API backend, and publish it on your own agent drive.
+Follow the instructions in this session to set up your development environment
+and build a simple web agent app.
 
-1. [Install Prerequisites](prerequisites)
-2. [Frontend Skeleton](frontend_skeleton)
-3. [Backend Skeleton](backend_skeleton)
-4. [Hooking Up](hooking_up)
-5. [Build Distribution](build_distribution)
+1. [Prerequisites](prerequisites)
+2. [Write Web Page](write_web_page)
+3. [Write Web Agent](write_web_agent)
+4. [Link Agent to Page](link_agent_to_page)
+5. [Running the App](running_the_app)
+6. [Hot Module Replacement](hot_module_replacement)
+7. [Build Distribution](build_distribution)

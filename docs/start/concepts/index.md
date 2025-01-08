@@ -13,5 +13,5 @@ The pages below explain different aspects:
 - [What is a Web Agent?](whatis)
 - [Uses of Web Agents](uses)
 - [Basic Capabilities](basics)
-- [Web Agent Shell](shell)
-- [Web Agent Drive](drive)
+- [Web Daemon Shell](shell)
+- [Web Daemon Drive](drive)
