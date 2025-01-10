@@ -30,6 +30,8 @@ Note that the port number `8081` matches the setting in `chrome://flags` we did 
 Check that the default frontend loads correctly in Chrome:
   - Navigate to [http://host.docker.internal:8081](http://host.docker.internal:8081)
 
+![Vite](vite.png)
+
 # Step 4
 Install the `webdaemon` library so you can use it in the app:
   - `deno install npm:webdaemon`
@@ -64,7 +66,7 @@ function App() {
         throw "Agent not started"
       }
       const json = await response.json()
-      setMessage(json.ok)
+      setMessage(json.ok || json.error)
     }
     catch (e) {
       setMessage(String(e))
@@ -90,7 +92,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test web page HMR
         </p>
         <p>
-          Edit <code>agent/index.ts</code> and save to test web agent HMR
+          Edit <code>agent/agent.ts</code> and save to test web agent HMR
         </p>
       </div>
       <p className="read-the-docs">

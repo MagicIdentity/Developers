@@ -20,9 +20,11 @@ Make sure you have the following prerequisites completed:
    - `ping host.docker.internal` shows 127.0.0.1.
 4. In the Chrome browser, set that origin to be a secure context:
    - Open `chrome://flags/#unsafely-treat-insecure-origin-as-secure`
-   - Add the following origin:
+   - Add the following origin and set the option to **Enabled**:
      `http://host.docker.internal:8081`
    - Relaunch Chrome when prompted.
+
+![Chrome](chrome.png)
 
 Note that our React dev site will be on port `8081`.
 There's nothing special about that, you can use a different port if you like.

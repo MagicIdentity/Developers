@@ -11,7 +11,7 @@ portion of your app alongside the web page.
 # Step 1
 Use your console and make sure you are in your app directory `myapp`.
 
-This is important because we reference the current directory using `$PWD` in step 2.
+This is important because we rely on the current directory in the next step.
 
 # Step 2
 Start the development web daemon using `docker`:
@@ -20,12 +20,12 @@ Start the development web daemon using `docker`:
 docker run \
   --name devdaemon \
   --publish 56032:56032 \
-  --mount type=bind,source=$PWD/agent,target=/mnt/agent \
+  --mount type=bind,source=.,target=/mnt/myapp \
   magicid/devdaemon:dev
 ```
 
 If you look carefully, you'll see that we have mounted the disk directory that
-contains the web agent code on the docker container which runs it.
+contains our app on the docker container which runs the agent code.
 
 # Step 3
 The `devdaemon` container prints a message upon startup which includes a link
@@ -48,8 +48,11 @@ for _both_ your browser _and_ the `devdaemon` container.
 ![MyApp](app1.png)
 
 # Step 5
-You can now click the **Contact Agent** button. The agent code runs and responds with the
-text `Agent says hello!`.
+You can now click the **Contact Agent** button.
+
+Your browser makes the request to your agent, which takes a second or two to load.
+
+Then the button text changes to `Agent says hi!`.
 
 # Step 6
 Navigate back to the shell `http://localhost:56032` either directly or by using the back button
