@@ -3,6 +3,7 @@ layout: page
 title: Build Distribution
 parent: Local Development
 back: Hot Module Replacement
+next: Publish on Drive
 ---
 The build now needs to include the agent server code.
 
@@ -43,8 +44,8 @@ const importMapURL = String(new URL('importmap.json', import.meta.url))
 
 await esbuild.build({
   plugins: [...denoPlugins({importMapURL})],
-  entryPoints: [`agent.ts`],
-  outfile: `./dist/agent.js`,
+  entryPoints: ['agent.ts'],
+  outfile: './dist/agent.js',
   bundle: true,
   sourcemap: false,
   format: 'esm',
@@ -78,3 +79,10 @@ of root hrefs, to allow the app to be served from a subdirectory.
     plugins: [react()]
   })
   ```
+
+# Step 5
+Build the app using the following command:
+
+  - `deno run build`
+
+The `myapp/dist` directory contains the build output.

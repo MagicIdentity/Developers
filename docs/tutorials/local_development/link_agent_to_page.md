@@ -9,9 +9,6 @@ Now you've got both the web page and the web agent code, it's time to link them
 together.
 
 # Step 1
-Your web page `index.html` is linked to its web agent `agent.ts` using
-a `.yml` configuration file.
-
 Use your editor to replace your existing `index.html` with the following:
 
 `myapp/index.html`
@@ -36,8 +33,7 @@ Note the new `link rel=webdaemon` element. This has no effect in the browser, bu
 is used by the web daemon to auto-install the web agent.
 
 # Step 2
-The `myapp/public/agent.yml` file provides the web agent configuration including the
-prefix (`myapp`) and name (`v1`) of the agent server code in `agent.ts`:
+The `myapp/public/agent.yml` file provides the web agent configuration.
 
 It's important to put this in the `public` directory of `myapp`, so that it is not
 inlined by the Vite build process.
@@ -47,6 +43,11 @@ inlined by the Vite build process.
 title: My App
 prefix: myapp
 tab:
-  v1:
+  dev:
     src: file:///mnt/myapp/agent.ts
+    importmap: importmap.json
+  dist:
+    src: agent.js
+    importmap: importmap.json
+
 ```

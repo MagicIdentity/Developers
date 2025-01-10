@@ -22,3 +22,5 @@ Use your editor to change the `agent.ts` file:
 - Click the button in the web page.
 
 You can see the changed message returned by the agent with no agent reload required.
+
+Now we've got the development cycle sorted, time to move on to building the distribution.
