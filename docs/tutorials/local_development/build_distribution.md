@@ -19,19 +19,6 @@ we will add the build command for the web agent.
   ```
 
 # Step 2
-Create a new file `importmap.json` in the `myapp` directory:
-
-`importmap.json`
-```json
-{
-  "imports": {
-    "$std/": "https://deno.land/std@0.224.0/",
-    "$webdaemon": "npm:webdaemon"
-  }
-}
-```
-
-# Step 3
 Create a new file `esbuild.esm.ts` in the `myapp` directory:
 
 `esbuild.esm.ts`
@@ -40,7 +27,7 @@ import * as esbuild from 'https://deno.land/x/esbuild@v0.19.11/mod.js'
 import { denoPlugins } from 'https://deno.land/x/esbuild_deno_loader@0.8.5/mod.ts'
 import { parseArgs } from 'jsr:@std/cli/parse-args'
 
-const importMapURL = String(new URL('importmap.json', import.meta.url))
+const importMapURL = String(new URL('public/importmap.json', import.meta.url))
 
 await esbuild.build({
   plugins: [...denoPlugins({importMapURL})],
