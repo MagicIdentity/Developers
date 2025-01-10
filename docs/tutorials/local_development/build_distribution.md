@@ -53,7 +53,7 @@ Deno.exit(0)
 The agent-side code running under Deno resolves external dependencies
 natively - so there's no need to bundle them into the library code.
 
-# Step 4
+# Step 3
 The `vite.config.ts` file needs to output relative hrefs for scripts instead
 of root hrefs, to allow the app to be served from a subdirectory.
 
@@ -67,7 +67,7 @@ of root hrefs, to allow the app to be served from a subdirectory.
   })
   ```
 
-# Step 5
+# Step 4
 Build the app using the following command:
 
   - `deno run build`
