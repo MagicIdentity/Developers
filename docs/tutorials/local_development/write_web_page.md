@@ -17,26 +17,6 @@ From the menus that appear, select in turn:
 - `TypeScript + SWC`
 
 # Step 2
-Install the dependencies and fire up the dev server:
-```shell
-cd myapp
-deno install --allow-scripts
-deno run dev --port 8081
-```
-
-Note that the port number `8081` matches the setting in `chrome://flags` we did earlier.
-
-# Step 3
-Check that the default frontend loads correctly in Chrome:
-  - Navigate to [http://host.docker.internal:8081](http://host.docker.internal:8081)
-
-![Vite](vite.png)
-
-# Step 4
-Install the `webdaemon` library so you can use it in the app:
-  - `deno install npm:webdaemon`
-
-# Step 5
 Using your editor, copy and paste the following code into `myapp/src/App.tsx`,
 replacing what is already there:
 
@@ -60,7 +40,7 @@ function App() {
       if (!agentApp || agentApp.isOrphan()) {
         throw `App not linked to agent`
       }
-      const url = `${agentApp.getPartyOrigin()}/tab/myapp/v1/getMessage`
+      const url = `${agentApp.getPartyOrigin()}/tab/myapp/dev/getMessage`
       const response = await fetch(url)
       if (!response.ok) {
         throw "Agent not started"
@@ -105,8 +85,18 @@ function App() {
 export default App
 ```
 
-# Step 6
+# Step 3
+Install the dependencies and fire up the dev server:
+```shell
+cd myapp
+deno install npm:webdaemon --allow-scripts
+deno run dev --port 8081
+```
+
+Note that the port number `8081` matches the setting in `chrome://flags` we did earlier.
+
+# Step 4
 Check that the new frontend loads correctly in Chrome:
   - Navigate to [http://host.docker.internal:8081](http://host.docker.internal:8081)
 
-If you press the button now, it will say `App not yet linked to agent`.
+If you press the button now, it will say `App not linked to agent`.
