@@ -90,13 +90,13 @@ Install the dependencies and fire up the dev server:
 ```shell
 cd myapp
 deno install npm:webdaemon --allow-scripts
-deno run dev --port 8081
+deno run dev --port 5173
 ```
 
-Note that the port number `8081` matches the setting in `chrome://flags` we did earlier.
+Note that the port number `5173` matches the setting in `chrome://flags` we did earlier.
 
 # Step 4
 Check that the new frontend loads correctly in Chrome:
-  - Navigate to [http://host.docker.internal:8081](http://host.docker.internal:8081)
+  - Navigate to [http://host.docker.internal:5173](http://host.docker.internal:5173)
 
 If you press the button now, it will say `App not linked to agent`.

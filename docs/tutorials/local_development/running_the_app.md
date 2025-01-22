@@ -39,10 +39,10 @@ with code which opens the daemon shell in your browser.
 You can now install the app into the shell:
 
 - Click the <span class='material-icons'>add</span> icon top right.
-- Enter the app URL `http://host.docker.internal:8081/`
+- Enter the app URL `http://host.docker.internal:5173/`
 - Click `Install`.
 
-Note: You can't reference the app as localhost:8081, because the app URL must resolve correctly
+Note: You can't reference the app as localhost:5173, because the app URL must resolve correctly
 for _both_ your browser _and_ the `devdaemon` container.
 
 ![MyApp](app1.png)

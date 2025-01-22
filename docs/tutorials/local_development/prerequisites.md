@@ -21,12 +21,12 @@ Make sure you have the following prerequisites completed:
 4. In the Chrome browser, set that origin to be a secure context:
    - Open `chrome://flags/#unsafely-treat-insecure-origin-as-secure`
    - Add the following origin and set the option to **Enabled**:
-     `http://host.docker.internal:8081`
+     `http://host.docker.internal:5173`
    - Relaunch Chrome when prompted.
 
 ![Chrome](chrome.png)
 
-Note that our React dev site will be on port `8081`.
+Note that our React dev site will be on port `5173`.
 There's nothing special about that, you can use a different port if you like.
 
 In development, both browser and agent use `http:`. Normally, `https:` is required to
@@ -58,7 +58,7 @@ tunnels:
     proto: http
 
   website:
-   addr: 8081
+   addr: 5173
    proto: http
 ```
 
