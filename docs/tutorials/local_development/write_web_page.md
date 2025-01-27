@@ -17,6 +17,26 @@ From the menus that appear, select in turn:
 - `TypeScript + SWC`
 
 # Step 2
+Using your editor, copy and paste the following code into `myapp/vite.config.js`,
+replacing what is already there:
+
+```typescript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+
+// https://vite.dev/config/
+export default defineConfig({
+  server: {
+    allowedHosts: ['host.docker.internal']
+  },
+  plugins: [react()],
+})
+```
+
+This ensures Vite won't complain about being served from an address other than
+`localhost`.
+
+# Step 3
 Using your editor, copy and paste the following code into `myapp/src/App.tsx`,
 replacing what is already there:
 
@@ -85,7 +105,7 @@ function App() {
 export default App
 ```
 
-# Step 3
+# Step 4
 Install the dependencies and fire up the dev server:
 ```shell
 cd myapp
@@ -95,7 +115,7 @@ deno run dev --port 5173
 
 Note that the port number `5173` matches the setting in `chrome://flags` we did earlier.
 
-# Step 4
+# Step 5
 Check that the new frontend loads correctly in Chrome:
   - Navigate to [http://host.docker.internal:5173](http://host.docker.internal:5173)
 
