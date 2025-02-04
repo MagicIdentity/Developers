@@ -7,4 +7,4 @@ parent: Welcome
 ---
 These tutorials lead you through various aspects of Web Agents:
 
-- [Local Development](local_development) shows how to develop an app against a local developer web agent.
+- [App Development](app_development) shows how to add a web agent to a React app.
