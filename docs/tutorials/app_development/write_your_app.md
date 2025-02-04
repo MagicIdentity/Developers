@@ -7,17 +7,17 @@ next: Publish Your App
 ---
 # Step 1
 Open a console window and create a skeleton Vite app called `myapp`, to be built using
-React and Typescript:
+React and Javascript:
 ```shell
 deno run --allow-all npm:create-vite myapp
 ```
 From the menus that appear, select in turn:
 
 - `React`
-- `TypeScript + SWC`
+- `JavaScript + SWC`
 
 # Step 2
-Using your editor, copy and paste the following code into `myapp/src/App.tsx`,
+Using your editor, copy and paste the following code into `myapp/src/App.jsx`,
 replacing what is already there:
 
 ```jsx
@@ -28,7 +28,7 @@ import './App.css'
 import { BrowserApp } from 'webdaemon'
 
 function App() {
-  const [agentApp, setAgentApp] = useState<BrowserApp | null>(null)
+  const [agentApp, setAgentApp] = useState(null)
   const [message, setMessage] = useState('Contact Agent')
 
   useEffect(() => {
@@ -55,29 +55,12 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>Web Agent App</h1>
       <div className="card">
         <button onClick={fetchMessage}>
           {message}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test web page HMR
-        </p>
-        <p>
-          Edit <code>agent/agent.ts</code> and save to test web agent HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
