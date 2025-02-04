@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Write Web Page
-parent: Local Development
+title: Write Your App
+parent: App Development
 back: Prerequisites
-next: Write Web Agent
+next: Publish Your App
 ---
 # Step 1
 Open a console window and create a skeleton Vite app called `myapp`, to be built using
@@ -17,26 +17,6 @@ From the menus that appear, select in turn:
 - `TypeScript + SWC`
 
 # Step 2
-Using your editor, copy and paste the following code into `myapp/vite.config.js`,
-replacing what is already there:
-
-```typescript
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-
-// https://vite.dev/config/
-export default defineConfig({
-  server: {
-    allowedHosts: ['host.docker.internal']
-  },
-  plugins: [react()],
-})
-```
-
-This ensures Vite won't complain about being served from an address other than
-`localhost`.
-
-# Step 3
 Using your editor, copy and paste the following code into `myapp/src/App.tsx`,
 replacing what is already there:
 
@@ -60,7 +40,7 @@ function App() {
       if (!agentApp || agentApp.isOrphan()) {
         throw `App not linked to agent`
       }
-      const url = `${agentApp.getPartyOrigin()}/tab/myapp/dev/getMessage`
+      const url = `${agentApp.getPartyOrigin()}/tab/myapp/v1/getMessage`
       const response = await fetch(url)
       if (!response.ok) {
         throw "Agent not started"
@@ -105,18 +85,18 @@ function App() {
 export default App
 ```
 
-# Step 4
-Install the dependencies and fire up the dev server:
+# Step 3
+Install the dependencies and fire it up:
 ```shell
 cd myapp
 deno install npm:webdaemon --allow-scripts
-deno run dev --port 5173
+deno run dev
 ```
 
-Note that the port number `5173` matches the setting in `chrome://flags` we did earlier.
+Note the port number, which defaults to `5173` but may be different on your machine.
 
-# Step 5
-Check that the new frontend loads correctly in Chrome:
-  - Navigate to [http://host.docker.internal:5173](http://host.docker.internal:5173)
+# Step 4
+Check that the new frontend loads correctly in Chrome from your local machine:
+  - Navigate to [http://localhost:5173](http://localhost:5173)
 
 If you press the button now, it will say `App not linked to agent`.
