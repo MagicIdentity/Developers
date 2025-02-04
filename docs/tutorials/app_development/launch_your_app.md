@@ -3,16 +3,17 @@ layout: page
 title: Launch Your App
 parent: App Development
 back: Write Your Agent
+next: Summary
 ---
 You can now install your app into your web daemon shell.
 
 Make a note of:
 
 1. Your web daemon URL which shows your web daemon home page.
-   - e.g. https://myname.once.id
+   - e.g. `https://myname.once.id`
    - Remember each person has their own web daemon.
 2. The app URL you made earlier.
-   - e.g. https://numerous-book-silk-fotos.trycloudflare.com/
+   - e.g. `https://numerous-book-silk-fotos.trycloudflare.com/`
    - Remember this address is unique to the `cloudflared` you ran earlier.
 
 # Step 1

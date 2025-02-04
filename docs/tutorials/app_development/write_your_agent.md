@@ -16,7 +16,6 @@ inlined by the Vite build process:
 
 `myapp/public/agent.yml`
 ```yaml
-title: My App
 prefix: myapp
 tab:
   v1:
@@ -25,6 +24,9 @@ tab:
 
 # Step 2
 Link your app to the web agent definition using a `<link rel="webdaemon">` element:
+
+1. In your editor, open the `myapp/index.html` file.
+2. Replace the existing content with the following:
 
 # `myapp/index.html`
 ```html
@@ -35,7 +37,7 @@ Link your app to the web agent definition using a `<link rel="webdaemon">` eleme
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="webdaemon" href="agent.yml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>MyApp</title>
   </head>
   <body>
     <div id="root"></div>
@@ -45,7 +47,10 @@ Link your app to the web agent definition using a `<link rel="webdaemon">` eleme
 ```
 
 # Step 3
-Use your editor to copy the agent code into `myapp/public/agent.js`:
+Create the agent code that is linked to your app and runs in your web daemon:
+
+1. In your editor, create a new file `myapp/public/agent.js`.
+2. Paste the following content into the file:
 
 # `myapp/public/agent.js`
 ```typescript

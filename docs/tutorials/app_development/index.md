@@ -14,3 +14,4 @@ own web daemon.
 3. [Publish Your App](publish_your_app)
 4. [Write Your Agent](write_your_agent)
 5. [Launch Your App](launch_your_app)
+6. [Summary](summary)

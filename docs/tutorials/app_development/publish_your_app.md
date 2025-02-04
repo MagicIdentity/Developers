@@ -8,19 +8,10 @@ parent: App Development
 Your app is not yet visible on the internet, because it is running locally on
 your computer as `http://localhost:5173`.
 
-Tools like `ngrok` or `cloudflared` can be used to expose this host on the internet.
-
-Both have a free test capability, but ngrok's is hobbled by an interstitial page that
-blocks access to your site and uses cookies unless you have a paid account.
-
 # Step 1
-Open a new terminal window.
+Open a new terminal window and use `cloudflared` to publish your app on the internet:
 
-Install `cloudflared` on your computer as a global executable and use it to publish
-your app:
-
-1. `deno install --allow-all --global npm:cloudflared`
-2. `cloudflared tunnel --url http://localhost:5173`
+- `cloudflared tunnel --url http://localhost:5173`
 
 Note down the newly created address for your app from the generated output. In the example
 output below, the address is `https://subsection-remedies-nb-polymer.trycloudflare.com`:
@@ -32,8 +23,10 @@ output below, the address is `https://subsection-remedies-nb-polymer.trycloudfla
 2025-02-04T06:57:19Z INF +--------------------------------------------------------------------------------------------+
 ```
 
+Now your app has a public URL and will work from anywhere on the internet.
+
 # Step 2
-Now you've got a public URL, navigate to that address in your browser to check the tunnel works.
+Navigate to that public URL in your browser.
 
 Note that this address lasts only as long as your computer is on and the `cloudflared` command
 remains uninterrupted!
