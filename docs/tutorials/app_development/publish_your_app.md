@@ -26,7 +26,29 @@ output below, the address is `https://subsection-remedies-nb-polymer.trycloudfla
 Now your app has a public URL and will work from anywhere on the internet.
 
 # Step 2
-Navigate to that public URL in your browser.
+The framework we are using (Vite) needs to know we're accessing it from the internet.
+
+Using your editor, copy and paste the following code into `myapp/vite.config.js`,
+replacing what's already there:
+
+`myapp/vite.config.js`
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+
+// https://vite.dev/config/
+export default defineConfig({
+  server: {
+    allowedHosts: true
+  }
+  plugins: [react()],
+})
+```
+
+If you don't do this, you may see an error when accessing your app from the internet.
+
+# Step 2
+Navigate to your app's public URL in your browser.
 
 Note that this address lasts only as long as your computer is on and the `cloudflared` command
 remains uninterrupted!
