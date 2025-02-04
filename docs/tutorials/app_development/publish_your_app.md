@@ -26,7 +26,8 @@ output below, the address is `https://subsection-remedies-nb-polymer.trycloudfla
 Now your app has a public URL and will work from anywhere on the internet.
 
 # Step 2
-The framework we are using (Vite) needs to know we're accessing it from the internet.
+The framework we are using (Vite) needs to know we're accessing it from the internet. It also
+needs to be told that the app might be served from a path other than root.
 
 Using your editor, copy and paste the following code into `myapp/vite.config.js`,
 replacing what's already there:
@@ -38,6 +39,7 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',
   server: {
     allowedHosts: true
   }
