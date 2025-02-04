@@ -4,18 +4,17 @@ title: What is a Web Agent?
 parent: Concepts
 next: Uses of Web Agents
 ---
-A web agent is a personal server paired with an individual web page.
+Many businesses provide a REST API on the web, which is shared<sup>*</sup> between users.
 
-As a developer, this adds a new dimension to your apps. Now you get an automatically
-deployed backend for free.
+A web agent is similar, except it is super-focussed. It is unique to:
 
-More than that, the backend is unique to the user whose browser
-loaded the app.
+1. The business that produced the web app of which it is part.
+2. The individual person who has launched that app.
 
-You place your web agent `.ts` files right alongside the `.html` and `.css` of your web page,
-just like the `.js` files that execute in your user's browser.
+As a developer, this adds a new dimension to your apps.
 
-Your agent code is automatically deployed to your user's web agent server (_web daemon_) when they load your app.
+1. You place your web agent `.js` and `.ts` files right alongside the `.html` and `.css` of your web page.
+2. Users launch your app, but don't have to login to identify themselves.
 
 ## Centralised App
 Let's suppose you've written a backend API with the route `/myapi`.
