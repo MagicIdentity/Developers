@@ -1,5 +1,7 @@
 theme: minima
 
+title: Magic
+
 header_pages:
   - start/index.md
   - tutorials/index.md
