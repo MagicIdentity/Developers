@@ -2,7 +2,7 @@
 layout: home
 title: Welcome
 ---
-Welcome to the Web Agent Developer Resources site.
+Welcome <party></party> to the Web Agent Developer Resources site.
 
 The best place to start is probably [Starting Out](start). This
 takes you through the basics including activating your own web agent server, or _web daemon_.
